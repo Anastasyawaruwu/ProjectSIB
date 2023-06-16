@@ -12,7 +12,7 @@
             <div class="sidebar-brand-icon ">
             <i class="fas fa-store"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">HappyShopping </div>
+            <div class="sidebar-brand-text mx-1">HappyShopping </div>
         </a>
 
         <!-- Divider -->

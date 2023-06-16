@@ -11,9 +11,14 @@
                     <small><?php echo $barang->keterangan ?></small></br>
                     <span class="badge text-bg-success mb-2">Rp. <?php echo number_format($barang->harga, 0, ',','.')  ?></span></br>
                     
+                    <!-- button tambah keranjang -->
                     <?php echo anchor('dashboard/tambah_ke_keranjang/'. $barang->id_barang, 
-                    '<div class="btn btn-sm btn-primary"> Tambah ke Keranjang</div>') ?>
-                    <a href="#" class="btn btn-sm btn-warning">Detail</a>
+                    '<div class="btn btn-sm btn-warning"> Tambah ke Keranjang</div>') ?>
+
+                    <!-- detail -->
+                    <?php echo anchor('dashboard/detail/'. $barang->id_barang, 
+                    '<div class="btn btn-sm btn-primary"> Detail</div>') ?>
+                    
                 </div>
             </div>
             <?php endforeach; ?>

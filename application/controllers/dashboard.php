@@ -60,8 +60,14 @@ class dashboard extends CI_Controller
         }else{
             echo "Maaf, Pesanan anda gagal di proses";
         }
-        
+    }
 
-
+    public function detail($id_barang)
+    {
+        $data['barang'] = $this->model_barang->detail_barang($id_barang);
+        $this->load->view('templatest/header');
+        $this->load->view('templatest/sidebar');
+        $this->load->view('detail_barang', $data);
+        $this->load->view('templatest/footer');
     }
 }
