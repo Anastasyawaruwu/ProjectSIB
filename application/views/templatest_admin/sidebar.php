@@ -1,4 +1,6 @@
 
+
+
 <body id="page-top">
 
 <!-- Page Wrapper -->
@@ -12,7 +14,7 @@
             <div class="sidebar-brand-icon ">
             <i class="fas fa-store"></i>
             </div>
-            <div class="sidebar-brand-text mx-3">HappyShopping </div>
+            <div class="sidebar-brand-text mx-3">ADMIN </div>
         </a>
 
         <!-- Divider -->
@@ -20,49 +22,26 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="<?php echo base_url('admin/dashboard_admin') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
 
         <!-- Divider -->
         <hr class="sidebar-divider">
-
-        <!-- Heading -->
-        <div class="sidebar-heading">
-            KATEGORI
-        </div>
-
         
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-tv"></i>
-                <span>Elektronik</span></a>
+            <a class="nav-link" href="<?php echo base_url('admin/data_barang') ?>">
+                <i class="fas fa-fw fa-database"></i>
+                <span>Data Barang</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-tshirt"></i>
-                <span>Pakaian Wanita dan Pria</span></a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-tshirt"></i>
-                <span>Pakaian Anak</span></a>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-heart"></i>
-                <span>Kecantikan</span></a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-home"></i>
-                <span>Kebutuhan Rumah Tangga</span></a>
+            <a class="nav-link" href="<?php echo base_url('admin/invoice') ?>">
+                <i class="fas fa-fw fa-file-invoice"></i>
+                <span>Invoice</span></a>
         </li>
 
 
@@ -132,20 +111,6 @@
                             </form>
                         </div>
                     </li>
-
-                    <div class="navbar">
-                        <ul class="nav navbar-nav navbar-right ">
-                            <li >
-                                <?php
-                                $keranjang = 'Keranjang Belanja '. 
-                                $this->cart->total_items(). ' items ' 
-                                ?>
-
-                                <?php echo anchor('dashboard/detail_keranjang', $keranjang)  ?>
-
-                            </li>
-                        </ul>
-                    </div>
 
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
