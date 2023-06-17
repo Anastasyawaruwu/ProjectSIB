@@ -20,7 +20,7 @@
 
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="<?php echo base_url('dashboard') ?>">
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>Dashboard</span></a>
         </li>
@@ -37,31 +37,32 @@
 
         <!-- Nav Item - Tables -->
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="<?php echo base_url('kategori/elektronik') ?>">
                 <i class="fas fa-fw fa-tv"></i>
                 <span>Elektronik</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="<?php echo base_url('kategori/pakaian_wanita_pria') ?>">
                 <i class="fas fa-fw fa-tshirt"></i>
                 <span>Pakaian Wanita dan Pria</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="<?php echo base_url('kategori/pakaian_anak') ?>">
                 <i class="fas fa-fw fa-tshirt"></i>
                 <span>Pakaian Anak</span></a>
         </li>
 
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
+            <a class="nav-link" href="<?php echo base_url('kategori/kecantikan') ?>">
                 <i class="fas fa-fw fa-heart"></i>
                 <span>Kecantikan</span></a>
         </li>
+
         <li class="nav-item">
-            <a class="nav-link" href="tables.html">
-                <i class="fas fa-fw fa-home"></i>
+            <a class="nav-link" href="<?php echo base_url('kategori/kebutuhan_rumah_tangga') ?>">
+                <i class="fas fa-fw fa-heart"></i>
                 <span>Kebutuhan Rumah Tangga</span></a>
         </li>
 

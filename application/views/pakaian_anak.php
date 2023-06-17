@@ -2,9 +2,9 @@
 <div class="container-fluid">
 
     <div class="row  text-center mt-3">
-        <?php foreach ($barang as $barang): ?>
+        <?php foreach ($pakaian_anak as $barang): ?>
                         
-            <div class="card ml-3 mb-2" style="width: 16rem;">
+            <div class="card ml-3 mb-2" style="width: 18rem;">
                 <img src="<?php echo base_url(). '/uploads/'. $barang->gambar ?>" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title mb-1"><?php echo $barang->nama_barang ?></h5>
@@ -13,7 +13,7 @@
                     
                     <!-- button tambah keranjang -->
                     <?php echo anchor('dashboard/tambah_ke_keranjang/'. $barang->id_barang, 
-                    '<div class="btn btn-sm btn-warning"> Tambah Keranjang</div>') ?>
+                    '<div class="btn btn-sm btn-warning"> Tambah ke Keranjang</div>') ?>
 
                     <!-- detail -->
                     <?php echo anchor('dashboard/detail/'. $barang->id_barang, 

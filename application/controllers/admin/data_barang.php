@@ -13,35 +13,36 @@ class Data_barang extends CI_Controller
 
     public function tambah_aksi()
     {
-        $nama_barang    = $this->input->post('nama_barang');
-        $keterangan     = $this->input->post('keterangan');
-        $kategori       = $this->input->post('kategori');
-        $harga          = $this->input->post('harga');
-        $stok           = $this->input->post('stok');
-        $gambar         = $_FILES['gambar']['name'];
-        if ($gambar_gambar=''){}else{
-            $config ['upload_path']= './uploads';
-            $config ['allowed_types']= './jpg|jpeg|png|gif';
+        $nama_barang        = $this->input->post('nama_barang');
+        $keterangan         = $this->input->post('keterangan');
+        $kategori           = $this->input->post('kategori');
+        $harga              = $this->input->post('harga');
+        $stok               = $this->input->post('stok');
+        $gambar     = $_FILES['gambar']['name'];
+                if($gambar_barang =''){}else{
+                    $config['upload_path'] = './uploads';
+                    $config['allowed_types'] = 'jpg|jpeg|png|gif';
 
-            $this->load->library('upload', $config);
-            if(!$this->upload->do_upload('gambar')){
-                echo "Gambar Gagal di Upload";
-            }else{
-                    $gambar=$this->upload->data('file_name');
+                    $this->load->library('upload', $config);
 
+                    if(!$this->upload->do_upload('gambar')){
+                        echo "gambar gagal di upload";
+                    }else{
+                        $gambar=$this->upload->data('file_name');
+                    }
+                    
                 }
-        }
-        $data = array(
-            'nama_barang'       => $nama_barang,
-            'keterangan'        => $keterangan,
-            'kategori'          => $kategori,
-            'harga'             => $harga,
-            'stok'              => $stok,
-            'gambar'            => $gambar
-        );
+                $data = array(
+                    'nama_barang'   => $nama_barang,
+                    'keterangan'    => $keterangan,
+                    'kategori'      => $kategori,
+                    'harga'         => $harga,
+                    'stok'          => $stok,
+                    'gambar'           => $gambar
+                );
 
-        $this->model_barang->tambah_barang($data, 'tb_barang');
-        redirect('admin/data_barang/index');
+                $this->model_barang->tambah_barang($data, 'tb_barang');
+                redirect('admin/data_barang/index');
     }
 
     public function edit($id){

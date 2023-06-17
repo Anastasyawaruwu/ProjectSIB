@@ -35,7 +35,7 @@
     </table>
 </div>
 
-<!-- Modal -->
+<!-- Modal Tambah Barang -->
 <div class="modal fade" id="tambah_barang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -56,7 +56,13 @@
                 </div>
                 <div class="form-group">
                     <label>Kategori</label>
-                    <input type="text" name="kategori" class="form-control">
+                    <select class="form-control" name="kategori">
+                      <option>Elektronik</option>
+                      <option>Pakaian Wanita dan Pria</option>
+                      <option>Pakaian Anak</option>
+                      <option>Kecantikan</option>
+                      <option>Kebutuhan Rumah Tangga</option>
+                    </select>
                 </div>
                 <div class="form-group">
                     <label>Harga</label>
